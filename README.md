@@ -6,7 +6,11 @@
 This application will be integrated with services such as Facebook, Vkontakte, Twitter.
 
 ## User Characteristics
-The application will have a user-friendly interface and does not cause any restrictions on education , experience , technical literacy of users . However , the target audience of this application is a group of users who share common interests , place of residence , such as a hostel .
+The application will have a user-friendly interface and does not cause any restrictions on education , experience , technical literacy of users . However , the target audience of this application is a group of users who share common interests , place of residence , such as a hostel.
+
+## Assumptions and Dependencies
+
+A large number of visitors , may significantly increase the load , leading to the need to change something in the system.
 
 ## Functional requirements
 *	Login page, Signup page.
