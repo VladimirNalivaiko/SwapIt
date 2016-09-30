@@ -7,3 +7,5 @@ src/SwapIt/App_Data
 src/SwapIt/App_Start
 src/SwapIt/*.config
 src/SwapIt/Scripts
+src/*.txt
+src/*csproj

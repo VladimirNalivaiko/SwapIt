@@ -50,9 +50,12 @@ D:\SwapIt\SwapIt\bin\Microsoft.Owin.Security.OAuth.xml
 D:\SwapIt\SwapIt\bin\Microsoft.Owin.Security.Google.xml
 D:\SwapIt\SwapIt\bin\Microsoft.Owin.Security.Twitter.xml
 D:\SwapIt\SwapIt\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-D:\SwapIt\SwapIt\obj\Debug\SwapIt.csprojResolveAssemblyReference.cache
 D:\SwapIt\SwapIt\obj\Debug\SwapIt.dll
 D:\SwapIt\SwapIt\obj\Debug\SwapIt.pdb
 D:\SwapIt\SwapIt\obj\Debug\SwapIt.Migrations.createAdModel.resources
 D:\SwapIt\SwapIt\obj\Debug\SwapIt.csproj.GenerateResource.Cache
 D:\SwapIt\SwapIt\obj\Debug\SwapIt.Migrations.createAdModelChange.resources
+D:\SwapIt\SwapIt\bin\MvcSiteMapProvider.dll
+D:\SwapIt\SwapIt\bin\WebActivatorEx.dll
+D:\SwapIt\SwapIt\bin\MvcSiteMapProvider.xml
+D:\SwapIt\SwapIt\obj\Debug\SwapIt.Migrations.AdModel_New_Table.resources

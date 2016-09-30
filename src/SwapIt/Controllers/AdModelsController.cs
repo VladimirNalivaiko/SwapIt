@@ -62,7 +62,7 @@ namespace SwapIt.Controllers
         public ActionResult Edit(long? id)
         {
             if (id == null)
-            {
+            {   
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             AdModel adModel = db.AdModels.Find(id);
