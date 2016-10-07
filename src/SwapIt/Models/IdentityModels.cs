@@ -25,7 +25,8 @@ namespace SwapIt.Models
         {
         }
 
-        
+        public System.Data.Entity.DbSet<SwapIt.Models.AdModel> AdModels { get; set; }
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();

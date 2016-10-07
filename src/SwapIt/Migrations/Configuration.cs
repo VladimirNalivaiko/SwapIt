@@ -1,3 +1,5 @@
+using Microsoft.AspNet.Identity.EntityFramework;
+
 namespace SwapIt.Migrations
 {
     using System;
@@ -26,6 +28,12 @@ namespace SwapIt.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+            context.Roles.AddOrUpdate(
+                  new IdentityRole()
+                  {
+                      Id = "Admin", Name = "Admin"
+                  }
+                );
         }
     }
 }

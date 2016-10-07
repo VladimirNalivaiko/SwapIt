@@ -19,6 +19,6 @@ namespace SwapIt.Models
         {
         }
 
-        public System.Data.Entity.DbSet<SwapIt.Models.AdModel> AdModels { get; set; }
+        //public System.Data.Entity.DbSet<SwapIt.Models.AdModel> AdModels { get; set; }
     }
 }

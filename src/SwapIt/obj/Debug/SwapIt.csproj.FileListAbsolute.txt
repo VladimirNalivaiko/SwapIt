@@ -59,3 +59,4 @@ D:\SwapIt\SwapIt\bin\MvcSiteMapProvider.dll
 D:\SwapIt\SwapIt\bin\WebActivatorEx.dll
 D:\SwapIt\SwapIt\bin\MvcSiteMapProvider.xml
 D:\SwapIt\SwapIt\obj\Debug\SwapIt.Migrations.AdModel_New_Table.resources
+D:\SwapIt\SwapIt\obj\Debug\SwapIt.csprojResolveAssemblyReference.cache

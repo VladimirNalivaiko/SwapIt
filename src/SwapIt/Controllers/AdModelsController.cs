@@ -12,7 +12,7 @@ namespace SwapIt.Controllers
 {
     public class AdModelsController : Controller
     {
-        private SwapItContext db = new SwapItContext();
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: AdModels
         public ActionResult Index()
