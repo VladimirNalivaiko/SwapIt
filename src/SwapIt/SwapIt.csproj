@@ -267,6 +267,7 @@
     <Content Include="Views\AdModels\Details.cshtml" />
     <Content Include="Views\AdModels\Edit.cshtml" />
     <Content Include="Views\AdModels\Index.cshtml" />
+    <Content Include="Views\Manage\UsersAds.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
