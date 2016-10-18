@@ -11,6 +11,8 @@ namespace SwapIt.Models
         [Key]
         public long AdId { get; set; }
 
+        public string Owner { get; set; }
+
         public string Name { get; set; }
 
         public string Description { get; set; }

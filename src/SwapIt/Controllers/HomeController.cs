@@ -11,7 +11,6 @@ namespace SwapIt.Controllers
     {
         public ActionResult Index()
         {
-
             return View();
         }
 

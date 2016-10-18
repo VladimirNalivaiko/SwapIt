@@ -46,10 +46,11 @@ namespace SwapIt.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "AdId,Name,Description")] AdModel adModel)
+        public ActionResult Create([Bind(Include = "AdId,Name,Description,Owner")] AdModel adModel)
         {
             if (ModelState.IsValid)
             {
+                adModel.Owner = User.Identity.Name.ToString();
                 db.AdModels.Add(adModel);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -78,7 +79,7 @@ namespace SwapIt.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "AdId,Name,Description")] AdModel adModel)
+        public ActionResult Edit([Bind(Include = "AdId,Name,Description,Owner")] AdModel adModel)
         {
             if (ModelState.IsValid)
             {

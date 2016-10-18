@@ -23,6 +23,12 @@
 @foreach (var item in Model) {
     <tr>
         <td>
+            @User.Identity.Name
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Owner)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.Name)
         </td>
         <td>
