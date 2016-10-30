@@ -115,6 +115,7 @@ D:\git\SwapIt\src\SwapIt\bin\Microsoft.Owin.Security.OAuth.xml
 D:\git\SwapIt\src\SwapIt\bin\Microsoft.Owin.Security.Google.xml
 D:\git\SwapIt\src\SwapIt\bin\Microsoft.Owin.Security.Twitter.xml
 D:\git\SwapIt\src\SwapIt\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\git\SwapIt\src\SwapIt\obj\Debug\SwapIt.csprojResolveAssemblyReference.cache
 D:\git\SwapIt\src\SwapIt\obj\Debug\SwapIt.Migrations.createAdModel.resources
 D:\git\SwapIt\src\SwapIt\obj\Debug\SwapIt.Migrations.createAdModelChange.resources
 D:\git\SwapIt\src\SwapIt\obj\Debug\SwapIt.Migrations.AdModel_New_Table.resources

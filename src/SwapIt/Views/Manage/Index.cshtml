@@ -7,10 +7,14 @@
 
 <h2>@User.Identity.Name.ToString()</h2>
 
+<p>
+    @Html.ActionLink("Create New", "Create", "AdModels")
+</p>
+
 <p class="text-success">@ViewBag.StatusMessage</p>
 <div>
     <h4>Change your account settings</h4>
-    <table class="table table-hover table-striped">
+    <table class="table">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.UseAdModels.GetEnumerator().Current.Name)
@@ -18,7 +22,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.UseAdModels.GetEnumerator().Current.Description)
             </th>
-            <th></th>
+            <th>
+                Actions
+            </th>
         </tr>
         @foreach (var item in Model.UseAdModels)
         {
@@ -32,9 +38,11 @@
                         @Html.DisplayFor(modelItem => item.Description)
                     </td>
                     <td>
-                        @Html.ActionLink("Edit", "Edit", new {id = item.AdId}) |
-                        @Html.ActionLink("Details", "Details", new {id = item.AdId}) |
-                        @Html.ActionLink("Delete", "Delete", new {id = item.AdId})
+                        <div class="btn-group">
+                            <a class="btn btn-info" href='@Url.Action("Edit", "AdModels", new {id = item.AdId})'> Edit</a>
+                            <a class="btn btn-info" href='@Url.Action("Details", "AdModels", new {id = item.AdId})'> Details</a>
+                            <a class="btn btn-info" href='@Url.Action("Delete", "AdModels", new {id = item.AdId})'> Delete</a>
+                        </div>
                     </td>
                 </tr>
             }

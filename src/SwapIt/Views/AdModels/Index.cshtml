@@ -4,11 +4,6 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table table-hover table-striped">
     <tr>
         <th>
@@ -29,9 +24,11 @@
             @Html.DisplayFor(modelItem => item.Description)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.AdId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.AdId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.AdId })
+            <div class="btn-group">
+                <a class="btn btn-info" href='@Url.Action("Edit", "AdModels", new {id = item.AdId})'> Edit</a>
+                <a class="btn btn-info" href='@Url.Action("Details", "AdModels", new {id = item.AdId})'> Details</a>
+                <a class="btn btn-info" href='@Url.Action("Delete", "AdModels", new {id = item.AdId})'> Delete</a>
+            </div>
         </td>
     </tr>
 }

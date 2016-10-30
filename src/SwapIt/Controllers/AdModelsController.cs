@@ -53,7 +53,7 @@ namespace SwapIt.Controllers
                 adModel.Owner = User.Identity.Name.ToString();
                 db.AdModels.Add(adModel);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Manage");
             }
 
             return View(adModel);
@@ -83,9 +83,10 @@ namespace SwapIt.Controllers
         {
             if (ModelState.IsValid)
             {
+                adModel.Owner = User.Identity.Name.ToString();
                 db.Entry(adModel).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Manage");
             }
             return View(adModel);
         }
@@ -113,7 +114,7 @@ namespace SwapIt.Controllers
             AdModel adModel = db.AdModels.Find(id);
             db.AdModels.Remove(adModel);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Manage");
         }
 
         protected override void Dispose(bool disposing)
