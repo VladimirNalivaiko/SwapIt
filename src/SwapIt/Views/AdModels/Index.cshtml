@@ -15,22 +15,16 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            <div class="btn-group">
-                <a class="btn btn-info" href='@Url.Action("Edit", "AdModels", new {id = item.AdId})'> Edit</a>
-                <a class="btn btn-info" href='@Url.Action("Details", "AdModels", new {id = item.AdId})'> Details</a>
-                <a class="btn btn-info" href='@Url.Action("Delete", "AdModels", new {id = item.AdId})'> Delete</a>
-            </div>
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+        </tr>
+    }
 
 </table>
