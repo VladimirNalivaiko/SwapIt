@@ -86,7 +86,7 @@ namespace SwapIt.Controllers
                 adModel.Owner = User.Identity.Name.ToString();
                 db.Entry(adModel).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index", "Manage");
+                return RedirectToAction("Index");
             }
             return View(adModel);
         }
