@@ -17,7 +17,7 @@
 
     @foreach (var item in Model)
     {
-        <tr>
+        <tr onclick="location.href = '@(Url.Action("Details", "AdModels", new { id = item.AdId }))'">
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
