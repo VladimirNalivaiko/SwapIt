@@ -5,8 +5,21 @@
 
 @model IEnumerable<Microsoft.AspNet.Identity.EntityFramework.IdentityUser>
 
-@foreach (var user in Model)
+<table class="table table-hover table-striped">
+    <tr>
+        <th>
+            User Name
+        </th>
+        <th></th>
+    </tr>
 
-{
-    @user.UserName.ToString()
-}
+    @foreach (var item in Model)
+    {
+        <tr @*onclick="location.href = '@(Url.Action("Details", "AdModels", new { id = item.Id }))'"*@>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+        </tr>
+    }
+
+</table>

@@ -21,15 +21,19 @@ namespace SwapIt.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("RoleViewModel1", throwIfV1Schema: false)
         {
         }
 
         public System.Data.Entity.DbSet<SwapIt.Models.AdModel> AdModels { get; set; }
 
+        public System.Data.Entity.DbSet<SwapIt.Models.RoleViewModel> RoleViewModels { get; set; }
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
+
+        
     }
 }

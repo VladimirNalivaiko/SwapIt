@@ -60,6 +60,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -177,6 +179,7 @@
     <Compile Include="Controllers\AdModelsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\RolesAdminController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -196,9 +199,14 @@
     <Compile Include="Migrations\201610181446093_Ads owner added.Designer.cs">
       <DependentUpon>201610181446093_Ads owner added.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611012029415_User info added.cs" />
+    <Compile Include="Migrations\201611012029415_User info added.Designer.cs">
+      <DependentUpon>201611012029415_User info added.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdModel.cs" />
+    <Compile Include="Models\RoleViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -269,6 +277,11 @@
     <Content Include="Views\AdModels\Index.cshtml" />
     <Content Include="Views\Manage\UsersAds.cshtml" />
     <Content Include="Views\Home\UserList.cshtml" />
+    <Content Include="Views\RolesAdmin\Create.cshtml" />
+    <Content Include="Views\RolesAdmin\Delete.cshtml" />
+    <Content Include="Views\RolesAdmin\Details.cshtml" />
+    <Content Include="Views\RolesAdmin\Edit.cshtml" />
+    <Content Include="Views\RolesAdmin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -293,6 +306,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610181446093_Ads owner added.resx">
       <DependentUpon>201610181446093_Ads owner added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611012029415_User info added.resx">
+      <DependentUpon>201611012029415_User info added.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
