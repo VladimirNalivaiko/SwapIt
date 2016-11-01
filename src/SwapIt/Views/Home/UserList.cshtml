@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "UserListView";
+}
+
+@model IEnumerable<Microsoft.AspNet.Identity.EntityFramework.IdentityUser>
+
+@foreach (var user in Model)
+
+{
+    @user.UserName.ToString()
+}

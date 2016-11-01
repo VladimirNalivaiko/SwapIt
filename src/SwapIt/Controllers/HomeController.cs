@@ -27,5 +27,17 @@ namespace SwapIt.Controllers
 
             return View();
         }
+        public ActionResult UserList()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            List<ApplicationUser> users = new List<ApplicationUser>();
+            using (ApplicationDbContext db = new ApplicationDbContext())
+            {
+                users = db.Users.ToList();
+            }
+
+            return View(users);
+        }
     }
 }
