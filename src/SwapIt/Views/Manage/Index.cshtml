@@ -1,10 +1,12 @@
-﻿@using SwapIt.Models
+﻿@using Microsoft.AspNet.Identity
+@using Microsoft.AspNet.Identity.EntityFramework
+@using SwapIt.Models
 @model SwapIt.Models.IndexViewModel
 @{
     ViewBag.Title = "Manage";
     Model.UseAdModels = new ApplicationDbContext().AdModels;
-}
 
+}
 <h2>@User.Identity.Name.ToString()</h2>
 
 <p>
@@ -31,13 +33,15 @@
             if (item.Owner == User.Identity.Name.ToString())
             {
                 <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Name)
+                    <td><div class ="table-cell">
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </div>
                     </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Description)
-                    </td>
-                    <td>
+                    <td><div class="table-cell">
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </div>
+                    </td> 
+                    <td class ="table-cell">
                         <div class="btn-group">
                             <a class="btn btn-info" href='@Url.Action("Edit", "AdModels", new {id = item.AdId})'> Edit</a>
                             <a class="btn btn-info" href='@Url.Action("Details", "AdModels", new {id = item.AdId})'> Details</a>

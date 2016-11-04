@@ -1418,6 +1418,10 @@ th {
   margin-bottom: 20px;
 }
 
+td {
+    max-width: 200px;
+}
+
 .table thead > tr > th,
 .table tbody > tr > th,
 .table tfoot > tr > th,
@@ -6812,5 +6816,8 @@ td.visible-print {
   th.hidden-print,
   td.hidden-print {
     display: none !important;
+  }
+  .table-cell {
+      max-width: 27%;
   }
 }
