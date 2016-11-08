@@ -276,7 +276,7 @@
     <Content Include="Views\AdModels\Edit.cshtml" />
     <Content Include="Views\AdModels\Index.cshtml" />
     <Content Include="Views\Manage\UsersAds.cshtml" />
-    <Content Include="Views\Home\UserList.cshtml" />
+    <Content Include="Views\RolesAdmin\UserList.cshtml" />
     <Content Include="Views\RolesAdmin\Create.cshtml" />
     <Content Include="Views\RolesAdmin\Delete.cshtml" />
     <Content Include="Views\RolesAdmin\Details.cshtml" />

@@ -122,5 +122,4 @@ D:\git\SwapIt\src\SwapIt\obj\Debug\SwapIt.csproj.GenerateResource.Cache
 D:\git\SwapIt\src\SwapIt\obj\Debug\SwapIt.dll
 D:\git\SwapIt\src\SwapIt\obj\Debug\SwapIt.pdb
 D:\git\SwapIt\src\SwapIt\obj\Debug\SwapIt.Migrations.Adsowneradded.resources
-D:\git\SwapIt\src\SwapIt\obj\Debug\SwapIt.csprojResolveAssemblyReference.cache
 D:\git\SwapIt\src\SwapIt\obj\Debug\SwapIt.Migrations.Userinfoadded.resources

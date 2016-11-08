@@ -18,7 +18,9 @@ namespace SwapIt.Controllers
         // GET: RolesAdmin
         public ActionResult Index()
         {
-            return View(db.RoleViewModels.ToList());
+            ViewBag.Message = "Your contact page.";
+
+            return View();
         }
 
         // GET: RolesAdmin/Details/5
