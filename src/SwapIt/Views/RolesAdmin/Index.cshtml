@@ -16,9 +16,8 @@
             User Name
         </th>
         <th>
-            Date
+            Email
         </th>
-        <th></th>
     </tr>
 
     @foreach (var item in users)
@@ -26,6 +25,9 @@
         <tr @*onclick="location.href = '@(Url.Action("Details", "AdModels", new { id = item.Id }))'"*@>
             <td>
                 @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
             </td>
         </tr>
     }
