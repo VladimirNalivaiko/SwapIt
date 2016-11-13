@@ -270,18 +270,14 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\AdModels\Create.cshtml" />
-    <Content Include="Views\AdModels\Delete.cshtml" />
+    <Content Include="Views\Manage\Create.cshtml" />
+    <Content Include="Views\Manage\Delete.cshtml" />
     <Content Include="Views\AdModels\Details.cshtml" />
-    <Content Include="Views\AdModels\Edit.cshtml" />
+    <Content Include="Views\Manage\Edit.cshtml" />
     <Content Include="Views\AdModels\Index.cshtml" />
-    <Content Include="Views\Manage\UsersAds.cshtml" />
-    <Content Include="Views\RolesAdmin\UserList.cshtml" />
-    <Content Include="Views\RolesAdmin\Create.cshtml" />
-    <Content Include="Views\RolesAdmin\Delete.cshtml" />
-    <Content Include="Views\RolesAdmin\Details.cshtml" />
-    <Content Include="Views\RolesAdmin\Edit.cshtml" />
     <Content Include="Views\RolesAdmin\Index.cshtml" />
+    <Content Include="Views\Manage\Details.cshtml" />
+    <Content Include="Views\AdModels\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

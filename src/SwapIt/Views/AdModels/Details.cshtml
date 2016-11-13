@@ -27,8 +27,13 @@
         </dd>
 
     </dl>
+    @{
+        if (User.IsInRole("Admin"))
+        {
+            <a class="btn btn-info" href='@Url.Action("Delete", "AdModels", new {id = Model.AdId})'> Delete</a>
+        }
+    }
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.AdId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
