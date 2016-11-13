@@ -10,7 +10,7 @@
 <h2>@User.Identity.Name.ToString()</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create", "AdModels")
+    <a class="btn btn-info" href='@Url.Action("Create", "Manage")'>Create New Ad</a>
 </p>
 
 <p class="text-success">@ViewBag.StatusMessage</p>
