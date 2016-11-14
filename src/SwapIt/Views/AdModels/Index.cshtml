@@ -1,10 +1,71 @@
-﻿@model IEnumerable<SwapIt.Models.AdModel>
+﻿@using SwapIt.Models
+@model IEnumerable<SwapIt.Models.AdModel>
 
 @{
+    List<AdModel> item = Model.ToList();
     ViewBag.Title = "Index";
+    int i = 0;
 }
-
-<table class="table table-hover table-striped">
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/Site.css" rel="stylesheet">
+</head>
+<body>
+    @{
+        while (true)
+        {
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="ad-area"
+                         onclick="location.href = '@(Url.Action("Details", "AdModels", new {id = item[i].AdId}))'">
+                        @item[i].Name
+                        @item[i].Description
+                        @item[i].Owner
+                        @{i++;
+                            if (i >= item.Count)
+                            {
+                                break;
+                            }
+                        }
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="ad-area"
+                         onclick="location.href = '@(Url.Action("Details", "AdModels", new {id = item[i].AdId}))'">
+                        @item[i].Name
+                        @item[i].Description
+                        @item[i].Owner
+                        @{i++;
+                            if (i >= item.Count)
+                            {
+                                break;
+                            }
+                        }
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="ad-area"
+                         onclick="location.href = '@(Url.Action("Details", "AdModels", new {id = item[i].AdId}))'">
+                        @item[i].Name
+                        @item[i].Description
+                        @item[i].Owner
+                        @{i++;
+                            if (i >= item.Count)
+                            {
+                                break;
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    }
+</body>
+</html>
+@*<table class="table table-hover table-striped">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Name)
@@ -16,8 +77,8 @@
     </tr>
 
     @foreach (var item in Model)
-    {
-        <tr onclick="location.href = '@(Url.Action("Details", "AdModels", new { id = item.AdId }))'">
+            {
+        <tr onclick="location.href = '@(Url.Action("Details", "AdModels", new {id = item.AdId}))'">
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
@@ -27,4 +88,4 @@
         </tr>
     }
 
-</table>
+</table>*@

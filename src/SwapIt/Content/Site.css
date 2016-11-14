@@ -22,3 +22,23 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.ad-area {
+  -webkit-text-decoration-color: black;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 30%;
+  cursor: pointer;
+  margin: 5% 3% 5% 3%;
+  overflow: hidden;
+  border: none;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  font: normal 16px/1 "Times New Roman", Times, serif;
+  color: rgb(10,10,20);
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  background: #f6f7b4;
+}
