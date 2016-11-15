@@ -14,9 +14,15 @@
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="ad-area"
                          onclick="location.href = '@(Url.Action("Details", "AdModels", new {id = item[i].AdId}))'">
-                        @item[i].Name
-                        @item[i].Description
-                        @item[i].Owner
+                        <div class="ad-name">
+                            @item[i].Name
+                        </div>
+                        <div class="ad-description">
+                            @item[i].Description
+                        </div>
+                        <div class="ad-owner">
+                            @item[i].Owner
+                        </div>
                         @{i++;
                             if (i >= item.Count)
                             {
@@ -28,9 +34,15 @@
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="ad-area"
                          onclick="location.href = '@(Url.Action("Details", "AdModels", new {id = item[i].AdId}))'">
-                        @item[i].Name
-                        @item[i].Description
-                        @item[i].Owner
+                        <div class="ad-name">
+                            @item[i].Name
+                        </div>
+                        <div class="ad-description">
+                            @item[i].Description
+                        </div>
+                        <div class="ad-owner">
+                            @item[i].Owner
+                        </div>
                         @{i++;
                             if (i >= item.Count)
                             {
@@ -42,9 +54,15 @@
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="ad-area"
                          onclick="location.href = '@(Url.Action("Details", "AdModels", new {id = item[i].AdId}))'">
-                        @item[i].Name
-                        @item[i].Description
-                        @item[i].Owner
+                        <div class="ad-name">
+                            @item[i].Name
+                        </div>
+                        <div class="ad-description">
+                            @item[i].Description
+                        </div>
+                        <div class="ad-owner">
+                            @item[i].Owner
+                        </div>
                         @{i++;
                             if (i >= item.Count)
                             {
@@ -54,7 +72,7 @@
                     </div>
                 </div>
             </div>
-                            }
+        }
     }
 </body>
 

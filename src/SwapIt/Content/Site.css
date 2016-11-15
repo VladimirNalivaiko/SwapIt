@@ -30,37 +30,26 @@ textarea {
   cursor: pointer;
   margin: 5% 5% 5% 5%;
     height: 180px;
-  overflow: hidden;
-  border: none;
   -webkit-border-radius: 6px;
   border-radius: 6px;
-  font: normal 16px/1 "Times New Roman", Times, serif;
-  color: rgba(255,255,255,1);
-  text-align: center;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+    background-color: #AFEE3E;
   background: #f6f7b4;
-  -webkit-box-shadow: 1px 1px 1px 0 rgba(221,53,53,0.3) ;
-  box-shadow: 1px 1px 1px 0 rgba(221,53,53,0.3) ;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.2) ;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.1) ;
 }
 
-/*.ad-area {
-  -webkit-text-decoration-color: black;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 30%;
-  cursor: pointer;
-  margin: 5% 3% 5% 3%;
-  overflow: hidden;
-  border: none;
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
-  font: normal 16px/1 "Times New Roman", Times, serif;
-  color: rgb(10,10,20);
-  text-align: center;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  background: #f6f7b4;
-}*/
+.ad-name {
+    text-align: center;
+    font-family: verdana, sans-serif;
+    color: #2E2C2C;
+    font-size: 1.7em;
+    font-weight: bold;
+}
+
+.ad-description {
+    text-align: center;
+    font-family: chicago, verdana, sans-serif;
+}
+
+.ad-owner {
+    text-align: -webkit-right;
+}
