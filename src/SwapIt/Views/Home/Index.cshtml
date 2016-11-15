@@ -1,17 +1,60 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
+﻿@using SwapIt.Models
+@model IEnumerable<SwapIt.Models.AdModel>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+@{
+    List<AdModel> item = new ApplicationDbContext().AdModels.ToList();
+    ViewBag.Title = "Index";
+    int i = 0;
+}
 <body>
     @{
-        Html.RenderAction("Index", "AdModels");
+        while (true)
+        {
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="ad-area"
+                         onclick="location.href = '@(Url.Action("Details", "AdModels", new {id = item[i].AdId}))'">
+                        @item[i].Name
+                        @item[i].Description
+                        @item[i].Owner
+                        @{i++;
+                            if (i >= item.Count)
+                            {
+                                break;
+                            }
+                        }
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="ad-area"
+                         onclick="location.href = '@(Url.Action("Details", "AdModels", new {id = item[i].AdId}))'">
+                        @item[i].Name
+                        @item[i].Description
+                        @item[i].Owner
+                        @{i++;
+                            if (i >= item.Count)
+                            {
+                                break;
+                            }
+                        }
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="ad-area"
+                         onclick="location.href = '@(Url.Action("Details", "AdModels", new {id = item[i].AdId}))'">
+                        @item[i].Name
+                        @item[i].Description
+                        @item[i].Owner
+                        @{i++;
+                            if (i >= item.Count)
+                            {
+                                break;
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+                            }
     }
 </body>
-</html>
 
