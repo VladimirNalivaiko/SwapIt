@@ -5,6 +5,7 @@
     background-repeat: repeat;
 }
 
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -30,14 +31,13 @@ textarea {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   cursor: pointer;
-    height: 180px;
-    margin: 5% 5% 5% 5%;
+  height: 180px;
+  margin: 5% 5% 5% 5%;
   -webkit-border-radius: 6px;
   border-radius: 6px;
-    background-color: #AFEE3E;
-  background: #EFEFEF;
+  background-color: #EFEFEF;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.1) ;
-    font-family: roboto;
+  font-family: roboto;
 }
 
 .ad-name {

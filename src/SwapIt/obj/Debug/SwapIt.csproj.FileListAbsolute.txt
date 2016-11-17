@@ -124,3 +124,4 @@ D:\git\SwapIt\src\SwapIt\obj\Debug\SwapIt.pdb
 D:\git\SwapIt\src\SwapIt\obj\Debug\SwapIt.Migrations.Adsowneradded.resources
 D:\git\SwapIt\src\SwapIt\obj\Debug\SwapIt.Migrations.Userinfoadded.resources
 D:\git\SwapIt\src\SwapIt\obj\Debug\SwapIt.csprojResolveAssemblyReference.cache
+D:\git\SwapIt\src\SwapIt\bin\Duke.Owin.VkontakteMiddleware.dll
