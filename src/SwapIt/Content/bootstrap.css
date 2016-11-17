@@ -276,6 +276,7 @@ table {
   }
   .navbar {
     display: none;
+    
   }
   .table td,
   .table th {
@@ -4506,6 +4507,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar-inverse {
   background-color: #222222;
+  /*  background: transparent;   дл€ прозрачного navbar + к этому border нужно убрать и каринку подхох€щую
+  */
   border-color: #080808;
 }
 
