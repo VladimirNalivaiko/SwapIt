@@ -5,10 +5,8 @@
 }
 
 <h2>Details</h2>
-
+<hr />
 <div>
-    <h4>AdModel</h4>
-    <hr />
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.Name)
@@ -25,15 +23,33 @@
         <dd>
             @Html.DisplayFor(model => model.Description)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Owner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Owner)
+        </dd>
 
     </dl>
     @{
+        if (Model.Owner == User.Identity.Name.ToString())
+        {
+            <div class="btn-group">
+                @if (!User.IsInRole("Admin"))
+                {
+                    <a class="btn btn-danger" href='@Url.Action("Delete", "AdModels", new {id = Model.AdId})'> Delete</a>
+                }
+                <a class="btn btn-info" href='@Url.Action("Edit", "Manage", new {id = Model.AdId})'> Edit</a>
+                
+            </div>
+        }
+    }
+    <a class="btn btn-primary" href='@Url.Action("Index", "Home")'> Back to List</a>
+    @{
         if (User.IsInRole("Admin"))
         {
-            <a class="btn btn-info" href='@Url.Action("Delete", "AdModels", new {id = Model.AdId})'> Delete</a>
+            <a class="btn btn-danger" href='@Url.Action("Delete", "AdModels", new {id = Model.AdId})'> Delete</a>
         }
     }
 </div>
-<p>
-    @Html.ActionLink("Back to List", "Index")
-</p>

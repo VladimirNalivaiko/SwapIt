@@ -5,38 +5,20 @@
     ViewBag.Title = "Index";
     var i = 0;
 }
-
 <body>
 @{
     while (true)
     {
-        <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <div class="ad-area"
-                     onclick="location.href = '@(Url.Action("Details", "AdModels", new {id = item[i].AdId}))'">
-                    <div class="ad-name">
-                        @item[i].Name
-                    </div>
-                    <div class="ad-description">
-                        @item[i].Description
-                    </div>
-                </div>
-                @{
-                    i++;
-                    if (i >= item.Count)
-                    {
-                        break;
-                    }
-                }
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <div class="ad-area"
-                     onclick="location.href = '@(Url.Action("Details", "AdModels", new {id = item[i].AdId}))'">
-                    <div class="ad-name">
-                        @item[i].Name
-                    </div>
-                    <div class="ad-description">
-                        @item[i].Description
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="ad-area"
+                         onclick="location.href = '@(Url.Action("Details", "AdModels", new {id = item[i].AdId}))'">
+                        <div class="ad-name">
+                            @item[i].Name
+                        </div>
+                        <div class="ad-description">
+                            @item[i].Description
+                        </div>
                     </div>
                     @{
                         i++;
@@ -46,26 +28,43 @@
                         }
                     }
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <div class="ad-area"
-                     onclick="location.href = '@(Url.Action("Details", "AdModels", new {id = item[i].AdId}))'">
-                    <div class="ad-name">
-                        @item[i].Name
-                    </div>
-                    <div class="ad-description">
-                        @item[i].Description
-                    </div>
-                    @{
-                        i++;
-                        if (i >= item.Count)
-                        {
-                            break;
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="ad-area"
+                         onclick="location.href = '@(Url.Action("Details", "AdModels", new {id = item[i].AdId}))'">
+                        <div class="ad-name">
+                            @item[i].Name
+                        </div>
+                        <div class="ad-description">
+                            @item[i].Description
+                        </div>
+                        @{
+                            i++;
+                            if (i >= item.Count)
+                            {
+                                break;
+                            }
                         }
-                    }
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="ad-area"
+                         onclick="location.href = '@(Url.Action("Details", "AdModels", new {id = item[i].AdId}))'">
+                        <div class="ad-name">
+                            @item[i].Name
+                        </div>
+                        <div class="ad-description">
+                            @item[i].Description
+                        </div>
+                        @{
+                            i++;
+                            if (i >= item.Count)
+                            {
+                                break;
+                            }
+                        }
+                    </div>
                 </div>
             </div>
-        </div>
     }
 }
 </body>
