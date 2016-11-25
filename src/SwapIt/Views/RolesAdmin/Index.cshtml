@@ -3,8 +3,8 @@
 
 @{
     ViewBag.Title = "Index";
-    List<ApplicationUser> users = new List<ApplicationUser>();
-    using (ApplicationDbContext db = new ApplicationDbContext())
+    var users = new List<ApplicationUser>();
+    using (var db = new ApplicationDbContext())
     {
         users = db.Users.ToList();
     }

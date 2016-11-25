@@ -2,11 +2,10 @@
 @model IEnumerable<SwapIt.Models.AdModel>
 
 @{
-    List<AdModel> item = new ApplicationDbContext().AdModels.ToList();
+    var item = new ApplicationDbContext().AdModels.ToList();
     ViewBag.Title = "Index";
-    int i = 0;
+    var i = 0;
 }
 <body>
-   @{Html.RenderAction("Index", "AdModels");}
+@{ Html.RenderAction("Index", "AdModels"); }
 </body>
-

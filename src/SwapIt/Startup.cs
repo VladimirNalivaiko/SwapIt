@@ -1,7 +1,9 @@
 ﻿using Microsoft.Owin;
 using Owin;
+using SwapIt;
 
-[assembly: OwinStartupAttribute(typeof(SwapIt.Startup))]
+[assembly: OwinStartup(typeof(Startup))]
+
 namespace SwapIt
 {
     public partial class Startup

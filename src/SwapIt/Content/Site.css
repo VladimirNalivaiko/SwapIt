@@ -1,12 +1,13 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
     background-image: url("background.png");
     background-repeat: repeat;
+    padding-bottom: 20px;
+    padding-top: 50px;
 }
 
 
 /* Set padding to keep content from hitting the edges */
+
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
@@ -15,38 +16,34 @@
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
-.dl-horizontal dt {
-    white-space: normal;
-}
+
+.dl-horizontal dt { white-space: normal; }
 
 /* Set width on the form input elements since they're 100% wide by default */
+
 input,
 select,
-textarea {
-    max-width: 280px;
-}
+textarea { max-width: 280px; }
 
 .ad-area {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  cursor: pointer;
-  height: 180px;
-  margin: 5% 5% 5% 5%;
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
-  background-color: #EFEFEF;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.1) ;
-  font-family: roboto;
+    -moz-box-sizing: content-box;
+    -webkit-border-radius: 6px;
+    -webkit-box-sizing: content-box;
+    background-color: #EFEFEF;
+    border-radius: 6px;
+    box-sizing: content-box;
+    cursor: pointer;
+    font-family: roboto;
+    height: 180px;
+    margin: 5% 5% 5% 5%;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 .ad-name {
-    text-align: center;
     color: #2E2C2C;
     font-size: 1.7em;
     font-weight: bold;
-}
-
-.ad-description {
     text-align: center;
 }
+
+.ad-description { text-align: center; }

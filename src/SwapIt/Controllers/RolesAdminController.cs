@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
+﻿using System.Data.Entity;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
 using SwapIt.Models;
 
@@ -13,7 +8,7 @@ namespace SwapIt.Controllers
     [Authorize(Roles = "Admin")]
     public class RolesAdminController : Controller
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
+        private readonly ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: RolesAdmin
         public ActionResult Index()
@@ -27,14 +22,10 @@ namespace SwapIt.Controllers
         public ActionResult Details(string id)
         {
             if (id == null)
-            {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            RoleViewModel roleViewModel = db.RoleViewModels.Find(id);
+            var roleViewModel = db.RoleViewModels.Find(id);
             if (roleViewModel == null)
-            {
                 return HttpNotFound();
-            }
             return View(roleViewModel);
         }
 
@@ -65,14 +56,10 @@ namespace SwapIt.Controllers
         public ActionResult Edit(string id)
         {
             if (id == null)
-            {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            RoleViewModel roleViewModel = db.RoleViewModels.Find(id);
+            var roleViewModel = db.RoleViewModels.Find(id);
             if (roleViewModel == null)
-            {
                 return HttpNotFound();
-            }
             return View(roleViewModel);
         }
 
@@ -96,23 +83,20 @@ namespace SwapIt.Controllers
         public ActionResult Delete(string id)
         {
             if (id == null)
-            {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            RoleViewModel roleViewModel = db.RoleViewModels.Find(id);
+            var roleViewModel = db.RoleViewModels.Find(id);
             if (roleViewModel == null)
-            {
                 return HttpNotFound();
-            }
             return View(roleViewModel);
         }
 
         // POST: RolesAdmin/Delete/5
-        [HttpPost, ActionName("Delete")]
+        [HttpPost]
+        [ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            RoleViewModel roleViewModel = db.RoleViewModels.Find(id);
+            var roleViewModel = db.RoleViewModels.Find(id);
             db.RoleViewModels.Remove(roleViewModel);
             db.SaveChanges();
             return RedirectToAction("Index");
@@ -121,9 +105,7 @@ namespace SwapIt.Controllers
         protected override void Dispose(bool disposing)
         {
             if (disposing)
-            {
                 db.Dispose();
-            }
             base.Dispose(disposing);
         }
     }

@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
+﻿using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
 using SwapIt.Models;
 
@@ -12,7 +7,7 @@ namespace SwapIt.Controllers
 {
     public class AdModelsController : Controller
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
+        private readonly ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: AdModels
         public ActionResult Index()
@@ -24,14 +19,10 @@ namespace SwapIt.Controllers
         public ActionResult Details(long? id)
         {
             if (id == null)
-            {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            AdModel adModel = db.AdModels.Find(id);
+            var adModel = db.AdModels.Find(id);
             if (adModel == null)
-            {
                 return HttpNotFound();
-            }
             return View(adModel);
         }
 
@@ -39,23 +30,20 @@ namespace SwapIt.Controllers
         public ActionResult Delete(long? id)
         {
             if (id == null)
-            {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            AdModel adModel = db.AdModels.Find(id);
+            var adModel = db.AdModels.Find(id);
             if (adModel == null)
-            {
                 return HttpNotFound();
-            }
             return View(adModel);
         }
 
         // POST: AdModels/Delete/5
-        [HttpPost, ActionName("Delete")]
+        [HttpPost]
+        [ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(long id)
         {
-            AdModel adModel = db.AdModels.Find(id);
+            var adModel = db.AdModels.Find(id);
             db.AdModels.Remove(adModel);
             db.SaveChanges();
             return RedirectToAction("Index", "AdModels");
@@ -64,9 +52,7 @@ namespace SwapIt.Controllers
         protected override void Dispose(bool disposing)
         {
             if (disposing)
-            {
                 db.Dispose();
-            }
             base.Dispose(disposing);
         }
     }
