@@ -9,3 +9,6 @@
  -src/SwapIt/Scripts
  -src/*.txt
  -src/*csproj
+ *.psd1
+ *.psm1
+ *.ps1
