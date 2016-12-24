@@ -1,0 +1,251 @@
+Introduction: 
+
+In this document submittes test plan for web application "SwatIt".
+This document contains test aspects and ways for testing. Would be tested risks, that can appear during using application, accordance to SRS document, testing aspects, test cases and conclusion.
+Test Items (according to ISO 2501-2015) :
+	-safety
+	-productivity
+	-availability
+	-contentment	
+	-reliability
+	-understandle	
+
+Features to be tested: 
+	-Logging
+	-Adding ad
+	-Editting ad
+	-Removing ad
+
+Test Approach: 
+	-Functional testing
+	-Non-Functional testing
+	-Sanity Testing
+	-Build Verification Test
+
+TestCase id = 1
+	Description
+		Logging in the app by email and password
+	Instruction
+		1 - Open app in browser
+		2 - Click "Log in" button
+		3 - Fill fields with "nalivaikovova@swapit.com" and "1234"
+		4 - Submit
+	Expecting result
+		You would be redirected to main page.
+
+TestCase id = 2
+	Description
+		Adding new ad
+	Instruction
+		1 - Open app in browser
+		2 - Log in
+		3 - Go to your user page
+		4 - Fill all needed fields
+		5 - Submit
+	Expecting result
+		You would be redirected to user page.
+
+TestCase id = 3
+	Description
+		Editting ad
+	Instruction
+		1 - Open app in browser
+		2 - Log in
+		3 - Go to your user page
+		4 - Choose needed ad
+		5 - Edit all needed fields
+		6 - Submit
+	Expecting result
+		You would be redirected to user page.
+
+TestCase id = 4
+	Description
+		Removing ad
+	Instruction
+		1 - Open app in browser
+		2 - Log in
+		3 - Go to your user page
+		4 - Choose needed ad
+		5 - Click "Delete" button
+		6 - Submit
+	Expecting result
+		You would be redirected to user page.
+
+TestCase id = 5
+	Description
+		Logging in the app by Facebook
+	Instruction
+		1 - Open app in browser
+		2 - Click "Log in" button
+		3 - Click "Facebook" button
+		4 - You would be redirected to Facebook page
+		5 - Submit
+	Expecting result
+		You would be redirected to main page.
+
+TestCase id = 6
+	Description
+		Logging in the app by VKontakte
+	Instruction
+		1 - Open app in browser
+		2 - Click "Log in" button
+		3 - Click "VKontakte" button
+		4 - You would be redirected to VKontakte page
+		5 - Submit
+	Expecting result
+		You would be redirected to main page.
+
+TestCase id = 7
+	Description
+		Logging in the app by Twitter
+	Instruction
+		1 - Open app in browser
+		2 - Click "Log in" button
+		3 - Click "Twitter" button
+		4 - You would be redirected to Twitter page
+		5 - Submit
+	Expecting result
+		You would be redirected to main page.
+
+TestCase id = 8
+	Description
+		Failed log in by email and password
+	Instruction
+		1 - Open app in browser
+		2 - Click "Log in" button
+		3 - Fill fields with "nalivaikovova@swapit.com" and "4321"
+		4 - Submit
+	Expecting result
+		System will report about incorrect auth.
+
+TestCase id = 9.1
+	Description
+		Incorrect adding new ad
+	Instruction
+		1 - Open app in browser
+		2 - Log in
+		3 - Go to your user page
+		4 - Click button "Add new ad"
+		5 - Leave blank field "Name"
+		6 - Submit
+	Expecting result
+		System will report about blank field "Name".
+
+TestCase id = 9.2
+	Description
+		Incorrect adding new ad
+	Instruction
+		1 - Open app in browser
+		2 - Log in
+		3 - Go to your user page
+		4 - Click button "Add new ad"
+		5 - Leave blank field "Description"
+		6 - Submit
+	Expecting result
+		System will report about blank field "Description".
+
+TestCase id = 10.1
+	Description
+		Incorrect editting ad
+	Instruction
+		1 - Open app in browser
+		2 - Log in
+		3 - Go to your user page
+		4 - Choose needed ad
+		5 - Remove data from field "Name"
+		6 - Submit
+	Expecting result
+		System will report about blank field "Name".
+
+TestCase id = 10.2
+	Description
+		Incorrect editting ad
+	Instruction
+		1 - Open app in browser
+		2 - Log in
+		3 - Go to your user page
+		4 - Choose needed ad
+		5 - Remove data from field "Description"
+		6 - Submit
+	Expecting result
+		System will report about blank field "Description".
+		
+TestCase id = 11
+	Description
+		Failed log in by Facebook, when user doesn't log in Facebook
+	Instruction
+		1 - Open app in browser
+		2 - Click "Log in" button
+		3 - Click "Facebook" button
+	Expecting result
+		System will report about incorrect auth.
+
+TestCase id = 12
+	Description
+		Failed log in by Twitter, when user doesn't log in Twitter
+	Instruction
+		1 - Open app in browser
+		2 - Click "Log in" button
+		3 - Click "Twitter" button
+	Expecting result
+		System will report about incorrect auth.
+
+TestCase id = 13
+	Description
+		Failed log in by VKontakte, when user doesn't log in VKontakte
+	Instruction
+		1 - Open app in browser
+		2 - Click "Log in" button
+		3 - Click "VKontakte" button
+	Expecting result
+		System will report about incorrect auth.
+
+TestCase id = 13
+	Description
+		Correct auth. by "Admin" role
+	Instruction
+		1 - Open app in browser
+		2 - Click "Log in" button
+		3 - Fill fields with "admin@swapit.com" and "admin"
+		4 - Submit
+		5 - Click "All users" tab
+	Expecting result
+		You would be redirected to "All users" view.
+
+TestCase id = 14
+	Description
+		Failed auth. by "Admin" role
+	Instruction
+		1 - Open app in browser
+		2 - Click "Log in" button
+		3 - Fill fields with "user@swapit.com" and "user"
+		4 - Submit
+		5 - Click "All users" tab
+	Expecting result
+		You would be redirected to "All users" view.
+
+TestCase id = 15
+	Description
+		Failed . by "Admin" role
+	Instruction
+		1 - Open app in browser
+		2 - Click "Log in" button
+		3 - Fill fields with "user@swapit.com" and "user"
+		4 - Submit
+	Expecting result
+		System will report about incorrect auth.
+
+TestCase id = 16
+	Description
+		Correct auth. by "Admin" role
+	Instruction
+		1 - Open app in browser
+		2 - Click "Log in" button
+		3 - Fill fields with "user@swapit.com" and "user"
+		4 - Submit
+		5 - Click any ad
+	Expecting result
+		You would be redirected to main page.
+
+Conclusion:
+All given test cases are absolutely aprove accordance of planed application to actual one.
