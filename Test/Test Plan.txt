@@ -246,6 +246,3 @@ TestCase id = 16
 		5 - Click any ad
 	Expecting result
 		You would be redirected to main page.
-
-Conclusion:
-All given test cases are absolutely aprove accordance of planed application to actual one.
