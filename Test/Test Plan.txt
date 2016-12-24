@@ -1,4 +1,4 @@
-Introduction: 
+﻿Introduction: 
 
 In this document submittes test plan for web application "SwatIt".
 This document contains test aspects and ways for testing. Would be tested risks, that can appear during using application, accordance to SRS document, testing aspects, test cases and conclusion.
@@ -246,3 +246,5 @@ TestCase id = 16
 		5 - Click any ad
 	Expecting result
 		You would be redirected to main page.
+
+Вывод: В данном проекте были частично реализованы функциональные и не-функциональные требования. Проект находится на стадии разработки и тестирования, однако уже на данном этапе возможно его использование.
